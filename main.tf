@@ -38,6 +38,8 @@ resource "azurerm_mssql_database" "db" {
   collation    = "SQL_Latin1_General_CP1_CI_AS"
   license_type = "BasePrice"
   sku_name     = "Basic"
+  zone_redundant       = false
+  storage_account_type = "Local"
 }
 
 # Firewall rule to allow Azure Services (0.0.0.0)
