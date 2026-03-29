@@ -87,3 +87,12 @@ resource "azurerm_app_service_source_control" "sc" {
   branch                 = "main"
   use_manual_integration = true
 }
+
+resource "azurerm_source_control_token" "github_token" {
+  type  = "GitHub"
+  token = var.github_token
+
+  lifecycle {
+    ignore_changes = all
+  }
+}

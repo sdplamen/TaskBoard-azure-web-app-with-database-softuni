@@ -48,3 +48,8 @@ variable "repo_url" {
   type        = string
   description = "GitHub URL for TaskBoard app"
 }
+
+variable "github_token" {
+  type        = string
+  description = "GitHub Token"
+}
